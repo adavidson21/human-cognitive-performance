@@ -1,7 +1,7 @@
 import pandas as pd
-from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.tree import DecisionTreeRegressor
+from sklearn.tree import export_text
 import matplotlib.pyplot as plt
 
 # Load the dataset using pandas
@@ -52,3 +52,6 @@ plt.title("Decision Tree of Feature Importances")
 plt.gca().invert_yaxis()
 plt.tight_layout()
 plt.show()
+
+# Print the generated rules used in the decision tree
+print(export_text(model, feature_names=list(x.columns)))
