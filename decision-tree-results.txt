@@ -1,61 +1,33 @@
-## Feature Importances:
+Feature Importances:
               Feature  Importance
-8       Reaction_Time    0.816165
-9   Memory_Test_Score    0.128422
-3        Stress_Level    0.055413
-0                 Age    0.000000
-1              Gender    0.000000
-2      Sleep_Duration    0.000000
-4           Diet_Type    0.000000
-5   Daily_Screen_Time    0.000000
-6  Exercise_Frequency    0.000000
-7     Caffeine_Intake    0.000000
+1        Stress_Level    0.409391
+3   Daily_Screen_Time    0.313478
+4  Exercise_Frequency    0.277131
+0      Sleep_Duration    0.000000
+2           Diet_Type    0.000000
+5     Caffeine_Intake    0.000000
 
 ## Generated Rules
 
-|--- Reaction_Time <= 397.79
-|   |--- Reaction_Time <= 306.60
-|   |   |--- Memory_Test_Score <= 68.50
-|   |   |   |--- Stress_Level <= 6.50
-|   |   |   |   |--- value: [79.04]
-|   |   |   |--- Stress_Level >  6.50
-|   |   |   |   |--- value: [69.13]
-|   |   |--- Memory_Test_Score >  68.50
-|   |   |   |--- Stress_Level <= 6.50
-|   |   |   |   |--- value: [91.67]
-|   |   |   |--- Stress_Level >  6.50
-|   |   |   |   |--- value: [83.72]
-|   |--- Reaction_Time >  306.60
-|   |   |--- Memory_Test_Score <= 70.50
-|   |   |   |--- Stress_Level <= 6.50
-|   |   |   |   |--- value: [63.05]
-|   |   |   |--- Stress_Level >  6.50
-|   |   |   |   |--- value: [53.04]
-|   |   |--- Memory_Test_Score >  70.50
-|   |   |   |--- Stress_Level <= 5.50
-|   |   |   |   |--- value: [78.84]
-|   |   |   |--- Stress_Level >  5.50
-|   |   |   |   |--- value: [69.32]
-|--- Reaction_Time >  397.79
-|   |--- Reaction_Time <= 500.49
-|   |   |--- Memory_Test_Score <= 66.50
-|   |   |   |--- Stress_Level <= 5.50
-|   |   |   |   |--- value: [46.98]
-|   |   |   |--- Stress_Level >  5.50
-|   |   |   |   |--- value: [37.06]
-|   |   |--- Memory_Test_Score >  66.50
-|   |   |   |--- Stress_Level <= 5.50
-|   |   |   |   |--- value: [61.84]
-|   |   |   |--- Stress_Level >  5.50
-|   |   |   |   |--- value: [52.10]
-|   |--- Reaction_Time >  500.49
-|   |   |--- Memory_Test_Score <= 71.50
-|   |   |   |--- Stress_Level <= 5.50
-|   |   |   |   |--- value: [31.34]
-|   |   |   |--- Stress_Level >  5.50
-|   |   |   |   |--- value: [21.51]
-|   |   |--- Memory_Test_Score >  71.50
-|   |   |   |--- Stress_Level <= 5.50
-|   |   |   |   |--- value: [46.19]
-|   |   |   |--- Stress_Level >  5.50
-|   |   |   |   |--- value: [36.27]
+|--- Stress_Level <= 5.50
+|   |--- Daily_Screen_Time <= 6.55
+|   |   |--- Exercise_Frequency <= 0.50
+|   |   |   |--- value: [73.82]
+|   |   |--- Exercise_Frequency >  0.50
+|   |   |   |--- value: [64.84]
+|   |--- Daily_Screen_Time >  6.55
+|   |   |--- Exercise_Frequency <= 0.50
+|   |   |   |--- value: [66.38]
+|   |   |--- Exercise_Frequency >  0.50
+|   |   |   |--- value: [56.94]
+|--- Stress_Level >  5.50
+|   |--- Daily_Screen_Time <= 6.15
+|   |   |--- Exercise_Frequency <= 0.50
+|   |   |   |--- value: [65.14]
+|   |   |--- Exercise_Frequency >  0.50
+|   |   |   |--- value: [56.16]
+|   |--- Daily_Screen_Time >  6.15
+|   |   |--- Exercise_Frequency <= 0.50
+|   |   |   |--- value: [57.83]
+|   |   |--- Exercise_Frequency >  0.50
+|   |   |   |--- value: [47.62]

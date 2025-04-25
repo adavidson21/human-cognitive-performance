@@ -29,9 +29,9 @@ y = df['Cognitive_Score']
 
 
 # Train the decision three regressor on the entire dataset to extract the rules.
-# Set to a max depth of 4 to avoid overfitting the data
+# Set to a max depth of 3 to avoid overfitting the data
 # Set the random state to a random (constant) number to make the result consistent for each run.
-model = DecisionTreeRegressor(max_depth=4, random_state=99)
+model = DecisionTreeRegressor(max_depth=3, random_state=99)
 model.fit(x, y)
 
 
