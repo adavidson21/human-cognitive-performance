@@ -10,11 +10,15 @@ df = pd.read_csv("human_cognitive_performance.csv")
 # Drop columns that are not useful for training the model. 
 # 'User_ID' = just a unique identifier and no influence on the outcome.
 # 'AI_Predicted_Score' = is a prediction so we don't want to include it in our new prediction.
-df = df.drop(columns=['User_ID', 'AI_Predicted_Score'])
+# 'Reaction_Time' = is a measure of cognitive performance
+# 'Memory_Test_Score' = is a measure of cognitive performance
+# 'Age' = personal characteristic
+# 'Gender' = personal characteristic
+df = df.drop(columns=['User_ID', 'AI_Predicted_Score', 'Reaction_Time', 'Memory_Test_Score', 'Age', 'Gender'])
 
 # Encode categorical features to convert them to numeric form so it can be interpreted properly.
 label_encoders = {}
-for col in ['Gender', 'Diet_Type', 'Exercise_Frequency']:
+for col in ['Diet_Type', 'Exercise_Frequency']:
     le = LabelEncoder()
     df[col] = le.fit_transform(df[col]) # replaces the category to integer codes
     label_encoders[col] = le # store the encoders just in case the decoding is needed later
