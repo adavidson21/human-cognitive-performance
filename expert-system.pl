@@ -1,5 +1,5 @@
 /* clear prolog screen helper */
-cls :- write('\33\[2J').
+clear :- write('\33\[2J').
 
 /* Dynamic predicates to store the user responses */
 :- dynamic stress/1, screen_time/1, exercise_frequency/1.
@@ -54,7 +54,7 @@ ask_user(Question, Metric) :-
         save_response(Metric, Response),
         write('Response has been saved.'), nl, nl;
         write('Invalid response. Please try again.'), nl,
-        fail
+        ask_user(Question, Metric)
     ).
 
 /* Rules */
